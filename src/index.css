@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: local('Neue Montreal'), url('assets/Fonts/NeueMontreal-Regular.ttf') format('truetype');
+}
+
+.font-neue-montreal {
+  font-family: 'Neue Montreal', sans-serif;
+}
+@font-face {
+  font-family:'Founders Grotesk';
+  src: local('Founders Grotesk'), url('assets/Fonts/FoundersGrotesk-Semibold.ttf') format('truetype');
+}
+
+.font-Founders-Grotesk {
+    font-family: 'Founders Grotesk',sans-serif;
+}
