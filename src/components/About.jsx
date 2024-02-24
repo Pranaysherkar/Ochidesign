@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 function About() {
+  const [Hoverd, setIsHoverd] = useState(false);
   return (
     <>
       <div className="bg-[#CDEA68] w-full rounded-t-2xl pt-24 pl-14 pb-12 font-neue-montreal">
@@ -38,13 +39,29 @@ function About() {
       <div className="w-full border-t border-[#81963e] bg-[#CDEA68] flex px-12 py-5 justify-between">
         <div className="w-1/2">
           <h1 className="text-[55px] ">Our approach:</h1>
-          <div className="bg-black text-white w-44 h-14 flex justify-between items-center p-2 rounded-full">
+          <div
+            onMouseEnter={() => setIsHoverd(true)}
+            onMouseLeave={() => setIsHoverd(false)}
+            className={`button bg-black text-white w-44 h-14 flex justify-between items-center p-2 rounded-full ${
+              Hoverd ? `bg-zinc-800 ` : ``
+            }`}
+          >
             <h3 className="uppercase px-2">read more</h3>
-            <span className="bg-white text-black flex w-[.5vw] h-[.5vw] rounded-full hover:justify-center hover:items-center hover:w-[3vw]  hover:h-[3vw] ease-in-out duration-100"><GoArrowUpRight /></span>
+            <span
+              className={`bg-white text-black flex items-center justify-center w-[3vw] h-[3vw] rounded-full scale-[.2] transition ease-linear duration-100 ${
+                Hoverd ? `text-black scale-[1]` : ``
+              }`}
+            >
+              <GoArrowUpRight />
+            </span>
           </div>
         </div>
-        <div className="w-1/2 h-[70vh] bg-zinc-400 rounded-2xl overflow-hidden">
-    <img className="w-full h-full object-cover"  src="https://ochi.design/wp-content/uploads/2022/05/Homepage-Photo-663x469.jpg" alt="" />
+        <div className={`w-1/2 h-[70vh] rounded-2xl overflow-hidden`}>
+          <img
+            className={`w-full h-full object-cover rounded-2xl transition ease-linear duration-500  ${Hoverd ? `scale-95 ` :`scale-100`}`}
+            src="https://ochi.design/wp-content/uploads/2022/05/Homepage-Photo-663x469.jpg"
+            alt=""
+          />
         </div>
       </div>
     </>
