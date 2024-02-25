@@ -8,6 +8,7 @@ import Feature from "./components/Feature";
 import Client from "./components/Client";
 import Cards from "./components/Cards";
 import OpenEye from "./components/OpenEye";
+import Footer from "./components/Footer";
 function App() {
   return (
     <div className="w-full min-h-screen bg-[#F1F1F1]">
@@ -20,6 +21,7 @@ function App() {
       <Client />
       <Cards />
       <OpenEye />
+      <Footer />
     </div>
   );
 }

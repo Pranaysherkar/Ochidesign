@@ -75,11 +75,11 @@ function OpenEye() {
           <div
             onMouseEnter={() => setIsHoverd2(true)}
             onMouseLeave={() => setIsHoverd2(false)}
-            className={`text-black border border-black w-60 h-14 flex justify-between items-center p-2 rounded-full transition ease-out duration-100 ${
+            className={`text-black border border-black w-68 h-14 flex justify-between items-center p-2 rounded-full transition ease-out duration-100 ${
               Hoverd2 ? `bg-zinc-800  text-white` : ``
             }`}
           >
-            <h3 className="uppercase px-2">hello@ochi.design</h3>
+            <h3 className="uppercase px-2">hello@pranay.design</h3>
             <span
               className={`bg-black text-black flex items-center justify-center w-[3vw] h-[3vw] rounded-full scale-[.2] transition ease-linear duration-100 ${
                 Hoverd2 ? `bg-white text-black scale-[1]` : ``
