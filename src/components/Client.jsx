@@ -5,7 +5,7 @@ function Client() {
   const [Hover1, SetHover1] = useState(false);
   const [Hover2, SetHover2] = useState(false);
   return (
-    <div className="font-neue-montreal w-full min-h-screen">
+    <div data-scroll  data-scroll-speed=".1"  className="font-neue-montreal w-full min-h-screen">
       <h1 className="text-[55px] border-b-2 px-12 pt-7 pb-10 border-[#CCCCCD]">
         Clients' reviews
       </h1>

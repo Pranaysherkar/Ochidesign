@@ -1,8 +1,25 @@
-import React from "react";
+import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 
 function Navbar() {
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) setScroll(true);
+      else setScroll(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <div className="fixed z-[999] w-full px-14 py-5 font-neue-montreal flex items-center justify-between">
+    <div
+      className={`fixed z-[999] w-full px-14 py-5 font-neue-montreal flex items-center justify-between transition ease-in duration-100 ${
+        scroll ? `bg-[#ffffff2a] backdrop-blur-xl` : ``
+      }`}
+    >
       <div className="logo">
         <svg
           width="72"
@@ -33,20 +50,18 @@ function Navbar() {
           ></path>
         </svg>
       </div>
-      <div className="mid-navLinks flex gap-8">
-        {["Services", "Our work", "About us", "Insights", "contact us"].map(
+      <motion.div className="mid-navLinks  flex gap-10">
+         {["Services", "Our work", "About us", "Insights", "contact us"].map(
           (items, index) => (
-            <a
+            <motion.a
               key={index}
-              className={`text-lg capitalize font-normal ${
-                index === 4 && "ml-64"
-              }`}
+              className={` relative text-lg capitalize font-normal after:[" "] after:absolute after:top-full   after:left-0 after:-translate-1/2 after:inline-block after:w-0 after:h-[.8px] after:bg-black hover:after:w-20 hover:bottom-1 transition ease-in-out duration-150 after:ease-in after:duration-150 ${index === 4 && "ml-64"}`}
             >
               {items}
-            </a>
+            </motion.a>
           )
-        )}
-      </div>
+         )}
+      </motion.div>
     </div>
   );
 }

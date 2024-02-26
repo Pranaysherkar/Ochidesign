@@ -1,15 +1,17 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 function Hero() {
+  
   const [Hover,setIsHover]=useState(false);
   return (
-    <div className="w-full h-screen pt-1">
+    <div data-scroll data-scroll-section data-scroll-speed="-.3" className="w-full h-screen pt-1">
       <div className="textstructur mt-36 px-14">
         {["WE CREATE", "EYE-OPENING", "PRESENTATIONS"].map((items, index) => (
           <div className="masker" key={index}>
             <div className="flex items-center gap-3 overflow-hidden">
-                {index === 1 && (<div className="w-[9.5vw] h-[6vw] mt-3 bg-slate-600 rounded-lg overflow-hidden"> <img className="w-full h-full" src="src/assets/images/image01.jpg" alt="Loading..." /></div>)}
+                {index === 1 && (<motion.div initial={{width:0}} animate={{width:"9vw"}} transition={{ease:[0.76, 0, 0.24, 1],duration:1}} className="w-[9.5vw] h-[6vw] mt-3 bg-slate-600 rounded-lg overflow-hidden"> <img className="w-full h-full" src="src/assets/images/image01.jpg" alt="Loading..." /></motion.div>)}
             <h1 key={index}className="uppercase leading-[104px] text-[139px] font-Founders-Grotesk font-semibold">
               {items}
             </h1>

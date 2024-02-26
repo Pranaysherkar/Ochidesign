@@ -16,6 +16,7 @@ function OpenEye() {
     });
   });
   return (
+    <div data-scroll data-scroll-section data-scroll-speed=".1" className="w-full">
     <div className="relative bg-[#CDEA68] w-full py-28 rounded-xl">
       <div className="w-full text-center ">
         <h1 className=" text-[15vw] font-bold font-Founders-Grotesk leading-[.7]">
@@ -90,6 +91,7 @@ function OpenEye() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

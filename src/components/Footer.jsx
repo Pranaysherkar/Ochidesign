@@ -44,17 +44,17 @@ function Footer() {
         <div className="detail font-neue-montreal flex">
           <div className="left w-1/2 text-lg">
             <h4 className="my-8">S:</h4>
-            {["Instagram","Behance","Facebook","Linkedin"].map((items,index)=>(<h4 key={index}>{items}</h4>))}
+            {["Instagram","Behance","Facebook","Linkedin"].map((items,index)=>(<h4 key={index} className="underline pb-1">{items}</h4>))}
             <h4 className="my-6">L:</h4>
-            <p className="w-40">202-1965 W 4th Ave Vancouver, Canada</p>
-            <p className="w-40 mt-4">30 Chukarina St Lviv, Ukraine</p>
+            <p className="w-40 underline pb-1">202-1965 W 4th Ave Vancouver, Canada</p>
+            <p className="w-40 underline pb-1 mt-4">30 Chukarina St Lviv, Ukraine</p>
             <h4 className="mt-6 mb-3">E:</h4>
-            <h4 className="lowercase">pranaysherkar19@gmail.com</h4>
+            <h4 className="lowercase underline pb-1">pranaysherkar19@gmail.com</h4>
             <h4 className="mt-7 opacity-[.3]">© pranay design 2024.</h4>
           </div>
           <div className="right w-1/2 mt-48 ml-[22vw] text-lg ">
           <h4 className="my-9 ">M:</h4>
-            {["Home","Services","Our work","About us","Insights","Contact us"].map((items,index)=>(<h4 key={index}>{items}</h4>))}
+            {["Home","Services","Our work","About us","Insights","Contact us"].map((items,index)=>(<h4 className="underline pb-1" key={index}>{items}</h4>))}
             <h4 className="mt-16 opacity-[.3] w-40">created by pranay.</h4>
           </div>
         </div>
