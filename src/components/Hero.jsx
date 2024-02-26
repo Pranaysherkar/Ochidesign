@@ -11,7 +11,7 @@ function Hero() {
         {["WE CREATE", "EYE-OPENING", "PRESENTATIONS"].map((items, index) => (
           <div className="masker" key={index}>
             <div className="flex items-center gap-3 overflow-hidden">
-                {index === 1 && (<motion.div initial={{width:0}} animate={{width:"9vw"}} transition={{ease:[0.76, 0, 0.24, 1],duration:1}} className="w-[9.5vw] h-[6vw] mt-3 bg-slate-600 rounded-lg overflow-hidden"> <img className="w-full h-full" src="src/assets/images/image01.jpg" alt="Loading..." /></motion.div>)}
+                {index === 1 && (<motion.div initial={{width:0}} animate={{width:"9vw"}} transition={{ease:[0.76, 0, 0.24, 1],duration:1}} className="w-[9.5vw] h-[6vw] mt-3 bg-slate-600 rounded-lg overflow-hidden"> <img className="w-full h-full" src="https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg" alt="Loading..." /></motion.div>)}
             <h1 key={index}className="uppercase leading-[104px] text-[139px] font-Founders-Grotesk font-semibold">
               {items}
             </h1>

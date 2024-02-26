@@ -14,7 +14,7 @@ function OchiEye() {
     })
   return (
     <div className='w-full h-screen overflow-hidden'>
-      <div data-scroll data-scroll-section data-scroll-speed="-.7" className='relative w-full h-full bg-cover bg-center bg-[url("src/assets/images/Ochibg.jpg")]'>
+      <div data-scroll data-scroll-section data-scroll-speed="-.7" className='relative w-full h-full bg-cover bg-center bg-[url("https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-1440x921.jpg")]'>
         <div className='absolute flex gap-12 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'>
             <div className="eye h-56 w-56 bg-white rounded-full flex items-center justify-center">
                 <div className="relative bg-black h-2/3 w-2/3 rounded-full">
